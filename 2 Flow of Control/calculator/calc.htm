@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<meta name="author" content="Lyndon">
+	<meta name="description" content="Calculator App">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="icon" type="image/x-icon" href=""/>
+</head>
+
+<body>
+	<header></header>
+	<main>
+        
+        <div class="calc"> <!--onclick="findClick()"-->
+        <div class="calcDisplay"><span id="display"></span></div> <!--BIG ISSUE WAS HERE: innerHTML worked on span NOT div-->   
+        <section>
+            <div class="numbers">
+                <button id="9" onclick="addNum(getAttribute('id'))">9</button> <!--this.id does work because it refers to button element-->
+                <button id="8" onclick="addNum(getAttribute('id'))">8</button>
+                <button id="7" onclick="addNum(getAttribute('id'))">7</button>
+                <button id="6" onclick="addNum(getAttribute('id'))">6</button>
+                <button id="5" onclick="addNum(getAttribute('id'))">5</button>
+                <button id="4" onclick="addNum(getAttribute('id'))">4</button>
+                <button id="3" onclick="addNum(getAttribute('id'))">3</button>
+                <button id="2" onclick="addNum(getAttribute('id'))">2</button>
+                <button id="1" onclick="addNum(getAttribute('id'))">1</button>
+                <button id="0" onclick="addNum(getAttribute('id'))">0</button>
+            </div>  
+        </section>
+        <section>
+            <div class="operators">
+                <button id="plus" onclick="addNum(getAttribute('id'))">+</button>
+                <button id="minus" onclick="addNum(getAttribute('id'))">-</button>
+                <button id="divide" onclick="addNum(getAttribute('id'))">/</button>
+                <button id="multiply" onclick="addNum(getAttribute('id'))">*</button>
+                <div class="equals">
+                    <button id="equals" onclick="addNum(getAttribute('id'))">=</button>
+                </div>    
+            </div>    
+        </section>
+        </div>    
+    </main>
+	<footer></footer>
+	<script src="scripts/calc.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/form.css" type="text/css">
+    <title></title>
+</head>
+<body>
+    <form onsubmit="return mySubmitFunction(event)">
+        <label for="newTask">New Task:</label>
+        <input type="text" id="newTask" onmouseover="showTool(this.id)" onmouseout="hideTool(this.id)" required />
+        <span class="toolTip" id="taskTool">Required and must contain no HTML characters.</span>
+        <br />
+        <label for="taskDesc">Task description:</label>
+        <textarea id="taskDesc" onmouseover="showTool(this.id)" onmouseout="hideTool(this.id)"></textarea>
+        <span class="toolTip" id="descTool">Optional.</span>
+        <br />
+        <label for="taskDate">Set Task due date:</label>
+        <input type="date" id="taskDate" onmouseover="showTool(this.id)" onmouseout="hideTool(this.id)" required />
+        <span class="toolTip" id="dateTool">Required. Must select a date.</span>
+        <br />
+        <label for="taskTime">Set Task due time:</label>
+        <input type="time" id="taskTime" onmouseover="showTool(this.id)" onmouseout="hideTool(this.id)" required />
+        <span class="toolTip" id="timeTool">Required. Must select a time.</span>
+        <br />
+        <span id="errorMsg"></span>
+        <br />
+        <button type="submit" onclick=formVal() id="submitbtn">Submit</button>
+        <br />
+
+        <ul id="myNewTaskList"></ul>
+    </form>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>

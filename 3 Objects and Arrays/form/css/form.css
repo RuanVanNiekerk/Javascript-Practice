@@ -1,0 +1,7 @@
+﻿body
+{
+}
+.toolTip, #errormsg{
+    color:red;
+    visibility:hidden;
+}
