@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="body"></p>
+
+    <script>
+        let json = '{ "name": "Mpho", "surname": "Beki", "interests": ["hockey", "volleybal", "tennis"], "DOB": "1982/04/17", "no.": "082.909.9182" }';
+
+        let jsonObj = JSON.parse(json);
+
+        console.log(jsonObj);
+        console.log(jsonObj.DOB);
+        console.log(Object.keys(jsonObj).indexOf("no."));
+
+        let localObj = JSON.stringify(jsonObj);
+        localStorage.setItem("personalInfo", localObj);
+
+        let retriveObj = localStorage.getItem("personalInfo");
+        let newObj = JSON.parse(retriveObj);
+        console.log(newObj);
+        document.getElementById("body").innerHTML = Object.values(newObj);//is it sanitized?
+    </script>
+</body>
+</html>
